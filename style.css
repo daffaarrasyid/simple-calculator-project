@@ -1,0 +1,91 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+  background: #1e1e1e;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.calculator {
+  background: linear-gradient(to bottom right, #252526, #1e1e1e);
+  border-radius: 10px;
+  padding: 20px;
+  width: 340px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+}
+
+.display-container {
+  padding: 10px;
+  border-bottom: 1px solid #333;
+  margin-bottom: 10px;
+}
+
+.expression-display {
+  font-size: 16px;
+  color: #aaa;
+  text-align: right;
+  min-height: 20px;
+}
+
+.display {
+  background: transparent;
+  color: white;
+  text-align: right;
+  font-size: 48px;
+  min-height: 60px;
+  overflow-x: auto;
+}
+
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 8px;
+}
+
+button {
+  font-size: 18px;
+  padding: 20px;
+  border: none;
+  border-radius: 10px;
+  background-color: #3c3c3c;
+  color: white;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+button:hover {
+  background-color: #555;
+}
+
+button:active {
+  background-color: #777;
+}
+
+button[data-op], button[data-func], #btn-clear, #btn-clear-entry, #btn-backspace, #btn-percent {
+  background-color: #2d2d2d;
+}
+
+button[data-op]:hover, button[data-func]:hover, #btn-clear:hover, #btn-clear-entry:hover, #btn-backspace:hover, #btn-percent:hover {
+  background-color: #4a4a4a;
+}
+
+#btn-equal {
+  background-color: #0078d7;
+  color: white;
+  grid-column: span 1;
+}
+
+#btn-equal:hover {
+  background-color: #005a9e;
+}
+
+.hidden {
+  display: none;
+}
